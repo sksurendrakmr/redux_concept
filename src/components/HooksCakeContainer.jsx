@@ -19,7 +19,7 @@ import { buyCake } from "../redux";
     - Return a reference to the dispatch function from the redux store.
  */
 export const HooksCakeContainer = () => {
-  const numOfCakes = useSelector((state) => state.numOfCakes);
+  const numOfCakes = useSelector((state) => state.cake.numOfCakes);
   const dispatch = useDispatch();
   return (
     <div>

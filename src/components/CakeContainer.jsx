@@ -15,7 +15,7 @@ export const CakeContainer = (props) => {
 //Get hold of redux state and how to dispatch an action from within react component
 const mapStateToProps = (state) => {
   return {
-    numOfCakes: state.numOfCakes,
+    numOfCakes: state.cake.numOfCakes,
   };
 };
 

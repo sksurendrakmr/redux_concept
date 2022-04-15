@@ -1,6 +1,11 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 import cakeReducer from "./cake/cakeReducer";
+import { iceCreamReducer } from "./iceCream/iceCreamReducer";
 
-const store = createStore(cakeReducer); //provide this store to react with Provider component
+const rootReducers = combineReducers({
+  cake: cakeReducer,
+  iceCream: iceCreamReducer,
+});
+const store = createStore(rootReducers); //provide this store to react with Provider component
 
 export default store;
