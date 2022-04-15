@@ -15,7 +15,7 @@ export const NewCakeContainer = (props) => {
         onChange={(e) => setNumber(parseInt(e.target.value))}
       />
       <h2>Number of cakes - {props.numOfCakes}</h2>
-      <button onClick={() => props.buyCake()}>Buy cake</button>
+      <button onClick={() => props.buyCake(number)}>Buy cake</button>
     </div>
   );
 };
@@ -29,7 +29,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    buyCake: () => dispatch(buyCake()),
+    buyCake: (number) => dispatch(buyCake(number)),
   };
 };
 //conect -> connect with the redux store
