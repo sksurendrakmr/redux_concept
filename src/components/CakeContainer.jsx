@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { buyCake } from "../redux";
 
+//redux Hooks allow us to subscribe to the redux store and dispatch actions without wrapping the component with connect()
 export const CakeContainer = (props) => {
   return (
     <div>
@@ -23,5 +24,5 @@ const mapDispatchToProps = (dispatch) => {
     buyCake: () => dispatch(buyCake()),
   };
 };
-
+//conect -> connect with the redux store
 export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);
